@@ -12,7 +12,7 @@ const NotFound = () => {
 const App = () => {
   return (
     <Router>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-lg navbar-dark">
         <Link className="navbar-brand" to="/">Currency Converter</Link>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
@@ -30,7 +30,7 @@ const App = () => {
       <Route path="/" component={ ExchangeRates } />
       <Route component={NotFound} />
       
-      <footer className="text-center text-lg-start bg-dark">
+      <footer className="text-center text-lg-start">
         <p><FaTwitter /> <a target="_blank" href="https://twitter.com">www.twitter.com</a></p>
         <p><FaLinkedin /> <a target="_blank" href="https://linkedin.com">www.linkedin.com</a></p>
         <p><FaGithub /> <a target="_blank" href="https://www.github.com/henry-hein">www.github.com/henry-hein</a></p>
