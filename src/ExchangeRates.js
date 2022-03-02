@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {set} from 'react';
+import DropdownMenu from './DropdownMenu';
 import { json, checkStatus } from './utils';
 
 
@@ -8,14 +9,20 @@ class ExchangeRates extends React.Component {
     this.state = {
       results: [],
       error: '',
+      chosenCurrency: 'USD',
     };
 
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleSubmit(event) {
+  chooseCurrency = (currency) => {
+    this.setState({ chosenCurrency: currency});
+  }
+
+  handleChange(event) {
     event.preventDefault();
-    fetch(`https://api.frankfurter.app/latest?from=USD`)
+    let { chosenCurrency } = this.state;;
+    fetch(`https://api.frankfurter.app/latest?from=${chosenCurrency}`)
       .then(checkStatus)
       .then(json)
       .then((data) => {
@@ -24,7 +31,6 @@ class ExchangeRates extends React.Component {
         }
         if (data) {
           console.log(data);
-          //console.log(data.rates);
           this.setState({ results: data.rates, error: ''});
         }
       })
@@ -35,17 +41,19 @@ class ExchangeRates extends React.Component {
   }
 
   render() {
-    const { results, error } = this.state;
+    const { results, error, chosenCurrency } = this.state;
 
     return (
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <form onSubmit={this.handleSubmit} className="form-inline my-4">
-              <button type="submit" className="btn btn-primary">Submit</button>
+            <form onSubmit={this.handleChange} className="form-inline my-4">
+              <h2>{chosenCurrency} Exchange Rate Table</h2>
+              <DropdownMenu passCurrency={this.chooseCurrency} />
+              <button type="submit" className="btn btn-secondary">Submit</button>
             </form>
             <div className="table-responsive-sm">
-              <table className="table">
+              <table className="table" style={{fontSize: "16px"}}>
                 <thead>
                   <tr>
                     <th scope="col">Currency</th>
