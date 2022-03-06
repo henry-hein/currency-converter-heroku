@@ -9,7 +9,7 @@ const DropdownMenu = (props) => {
 
   return (
     <div>
-      <select className="form-select form-select-sm my-3" id="form-select-custom" onChange={changeRate}>
+      <select className="form-select form-select-sm my-3" id="form-select-custom" onChange={changeRate} value={props.value}>
         <option value="USD">USD</option>
         <option value="EUR">EUR</option>
         <option value="GBP">GBP</option>

@@ -12,14 +12,14 @@ class ExchangeRates extends React.Component {
       chosenCurrency: 'USD',
     };
 
-    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   chooseCurrency = (currency) => {
     this.setState({ chosenCurrency: currency});
   }
 
-  handleChange(event) {
+  handleSubmit(event) {
     event.preventDefault();
     let { chosenCurrency } = this.state;;
     fetch(`https://api.frankfurter.app/latest?from=${chosenCurrency}`)
@@ -30,7 +30,7 @@ class ExchangeRates extends React.Component {
           throw new Error(data.Error);
         }
         if (data) {
-          console.log(data);
+          console.log(data.rates);
           this.setState({ results: data.rates, error: ''});
         }
       })
@@ -47,10 +47,10 @@ class ExchangeRates extends React.Component {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <form onSubmit={this.handleChange} className="form-inline my-4">
+            <form onSubmit={this.handleSubmit} className="form-inline my-4">
               <h2>{chosenCurrency} Exchange Rate Table</h2>
               <DropdownMenu passCurrency={this.chooseCurrency} />
-              <button type="submit" className="btn btn-secondary">Submit</button>
+              <button type="submit" className="btn btn-secondary" style={{ width: "100px" }}>Submit</button>
             </form>
             <div className="table-responsive-sm">
               <table className="table" style={{fontSize: "16px"}}>
@@ -58,6 +58,7 @@ class ExchangeRates extends React.Component {
                   <tr>
                     <th scope="col">Currency</th>
                     <th scope="col">Rate</th>
+                    <th scope="col">Inv. Rate</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -70,6 +71,7 @@ class ExchangeRates extends React.Component {
                       <tr>
                         <td>{key}</td>
                         <td>{results[key]}</td>
+                        <td>{(1/results[key]).toFixed(4)}</td>
                       </tr>
                 );
               })

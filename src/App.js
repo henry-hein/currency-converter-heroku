@@ -5,10 +5,6 @@ import ExchangeRates from './ExchangeRates';
 import { FaTwitter, FaLinkedin, FaGithub, FaGlobe, FaCopyright } from 'react-icons/fa';
 import './App.css';
 
-const NotFound = () => {
-  return <h2>404 Not Found</h2>;
-}
-
 const App = () => {
   return (
     <Router>
@@ -28,7 +24,6 @@ const App = () => {
       
       <Route path="/" exact component={ CurrencyConverter } />
       <Route path="/" component={ ExchangeRates } />
-      <Route component={NotFound} />
       
       <footer className="text-center text-lg-start">
         <p><FaTwitter /> <a target="_blank" href="https://twitter.com">www.twitter.com</a></p>
