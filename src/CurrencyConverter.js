@@ -47,6 +47,7 @@ class CurrencyConverter extends React.Component {
         }
         if (data) {
           console.log(data.rates);
+          console.log('hello');
           this.setState({ results: data.rates, error: ''});
         }
       })
