@@ -3,6 +3,13 @@ label {
 }
 
 #form-select-custom {
-  width: 30%;
+  width: 300px;
+  color: white;
+  background-color:#9a9ae1;
 }
 
+@media only screen and (max-width: 767px ) {
+  #form-select-custom {
+    width: 100%;
+  }
+}
