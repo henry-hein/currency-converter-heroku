@@ -2,6 +2,7 @@ import React from 'react';
 import { json, checkStatus } from './utils';
 import DropdownMenu from './DropdownMenu';
 import './CurrencyConverter.css';
+import { FaArrowsAltH } from 'react-icons/fa';
 
 class CurrencyConverter extends React.Component {
   constructor(props) {
@@ -11,11 +12,12 @@ class CurrencyConverter extends React.Component {
       error: '',
       chosenCurrency: 'USD',
       convertTo: 'EUR',
-      amountToConvert: '',
+      amountToConvert: 1,
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleSwap = this.handleSwap.bind(this);
   }
 
   convertCurrencyTo = (currency) => {
@@ -26,18 +28,36 @@ class CurrencyConverter extends React.Component {
     this.setState({ chosenCurrency: currency});
   }
 
+  handleSwap(event){
+    event.preventDefault();
+    let { chosenCurrency, convertTo } = this.state;
+    this.setState({convertTo: chosenCurrency});
+    this.setState({chosenCurrency: convertTo});
+    fetch(`https://api.frankfurter.app/latest?from=${convertTo}`)
+      .then(checkStatus)
+      .then(json)
+      .then((data) => {
+        if (!data) {
+          throw new Error(data.Error);
+        }
+        if (data) {
+          console.log(data.rates);
+          this.setState({ results: data.rates, error: ''});
+        }
+      })
+      .catch((error) => {
+        this.setState({ error: error.message });
+        console.log(error);
+      })
+  }
+
   handleChange(event){
-    // let {amountToConvert} = this.state;
-    // if(amountToConvert === ''){
-    //   return;
-    // } else {
     this.setState({ amountToConvert: event.target.value });
-    // }
   }
 
   handleSubmit(event) {
     event.preventDefault();
-    let { chosenCurrency } = this.state;;
+    let { chosenCurrency } = this.state;
     fetch(`https://api.frankfurter.app/latest?from=${chosenCurrency}`)
       .then(checkStatus)
       .then(json)
@@ -63,12 +83,17 @@ class CurrencyConverter extends React.Component {
         <form className="form-inline my-4" onSubmit={this.handleSubmit}>
           <div className="row">
             <h2>Exchange Rate Converter</h2>
-            <div className="col-12 col-md-6">
+            <div className="col-12 col-md-4">
                 <h4>From</h4>
                 <DropdownMenu value={chosenCurrency} passCurrency={this.chooseCurrency} />
-                <input type="number" className="form-control" id="custom-form1" onChange={this.handleChange} />
+                <input type="number" className="form-control" id="custom-form1" onChange={this.handleChange} value={amountToConvert}/>
             </div>
-            <div className="col-12 col-md-6">
+            <div className="col-12 col-md-4 d-flex align-items-center justify-content-center">
+              <button type="submit" className="btn btn-secondary mt-2 swap" onClick={this.handleSwap}>
+                <FaArrowsAltH />
+              </button>
+            </div>
+            <div className="col-12 col-md-4">
                 <h4>To</h4>
                 <DropdownMenu value={convertTo} passCurrency={this.convertCurrencyTo} />
                 <div className="px-2 pt-3 output" id="custom-form2">
@@ -78,7 +103,11 @@ class CurrencyConverter extends React.Component {
                   } if(chosenCurrency === convertTo){
                     return <p>{amountToConvert}</p>
                   } else {
-                    return <p>{(amountToConvert * results[convertTo]).toFixed(4)}</p>;
+                    if(isNaN(results[convertTo])){
+                      return <p></p>;
+                    } else {
+                        return <p>{(amountToConvert*results[convertTo]).toFixed(4)}</p>;
+                    }
                   }
                 })()}  
                 </div> 
