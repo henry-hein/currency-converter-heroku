@@ -27,9 +27,9 @@ const App = () => {
       
       <footer className="text-center text-lg-start">
         <p><FaTwitter /> <a target="_blank" href="https://twitter.com">www.twitter.com</a></p>
-        <p><FaLinkedin /> <a target="_blank" href="https://linkedin.com">www.linkedin.com</a></p>
+        <p><FaLinkedin /> <a target="_blank" href="https://linkedin.com/in/henry-hein">www.linkedin.com</a></p>
         <p><FaGithub /> <a target="_blank" href="https://www.github.com/henry-hein">www.github.com/henry-hein</a></p>
-        <p><FaGlobe /> <a target="_blank" href="https://www.google.com">www.currencyconverter.com</a></p>
+        <p><FaGlobe /> <a target="_blank" href="https://henryhein.netlify.app">www.currencyconverter.com</a></p>
         <div className="mx-auto"><FaCopyright /> All rights reserved to Currency Converter Inc.</div>
       </footer>
     </Router>
