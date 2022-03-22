@@ -8,7 +8,7 @@ import './App.css';
 const App = () => {
   return (
     <Router>
-      <nav className="navbar navbar-expand-lg navbar-dark">
+      <nav className="container navbar navbar-expand-lg navbar-dark">
         <Link className="navbar-brand" to="/">Currency Converter</Link>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
@@ -25,7 +25,7 @@ const App = () => {
       <Route path="/" exact component={ CurrencyConverter } />
       <Route path="/" component={ ExchangeRates } />
       
-      <footer className="text-center text-lg-start">
+      <footer className="text-center text-lg-start container">
         <p><FaTwitter /> <a target="_blank" href="https://twitter.com">Twitter</a></p>
         <p><FaLinkedin /> <a target="_blank" href="https://linkedin.com/in/henry-hein">Linkedin Account</a></p>
         <p><FaGithub /> <a target="_blank" href="https://www.github.com/henry-hein">Github</a></p>
