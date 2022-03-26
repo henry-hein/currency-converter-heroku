@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link, Switch} from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import CurrencyConverter from './CurrencyConverter';
 import ExchangeRates from './ExchangeRates';
 import { FaTwitter, FaLinkedin, FaGithub, FaGlobe, FaCopyright } from 'react-icons/fa';
