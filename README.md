@@ -9,12 +9,18 @@ base currency of your choice and 30+ currencies.
 
 ## Motivation
 
-Currency converter is an opportunity to learn about creating Mobile Responsive Website using React, React Hooks, as well as work with public APIs and continuous deployment using Heroku platform.
+Currency converter is an opportunity to learn about creating Mobile Responsive Website using React, React Hooks, as well as work with public APIs, learn version management with Github and continuous deployment using Heroku platform.
 
 ## Technology
 
 
 ![React](https://imgs.search.brave.com/VHvqxLuY44EOnZJTkzu7xM4rZAQNTq9V97jTKbVo9z8/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5s/dlI1bm5pN3hkUEN4/VS10QzZ0enpnSGFI/YSZwaWQ9QXBp)
+
+![Heroku](https://imgs.search.brave.com/sbCpzJ4DpQ8HmyDYPd2IVZxO2bhGCgs5frlAvsStbUg/rs:fit:293:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5P/a0kzaDN5NjNKSVQ1/UUJ4R043WkVnSGFJ/SCZwaWQ9QXBp)
+
+![Npm](https://imgs.search.brave.com/HnND-PJL6bzhcr_sblvTOb_iSeFcf2Xq_qrIdQBk1Vw/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC56/dDlzQzg2aVMtODNX/MkxmbUhJWk13SGFI/YSZwaWQ9QXBp)
+
+![Github](https://imgs.search.brave.com/x9Fb7I00OXkXE7z1-9Jh_Odj8KLNI7VHpT0iKGFauaA/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5Z/eU9Nbjl3ajh0WkNF/eUNQVFlHbGVnSGFI/YSZwaWQ9QXBp)
 
 * React:
 
