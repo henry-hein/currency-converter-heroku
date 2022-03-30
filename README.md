@@ -1,13 +1,13 @@
 # Currency Converter App feat. React, Boostrap, and Continous Deployment on Heroku
 
-**Author**: Henry [heinhenry@protonmail.com]
+**Author**: **Henry** [heinhenry@protonmail.com]
 
 A currency converter app that allows you to convert from one popular currency to another, see historical exchange rates, and see exchange rates between
 base currency of your choice and 30+ currencies.
 
-[![Watch the video](https://imgflip.com/gif/6anise)
+![6ank3a](https://user-images.githubusercontent.com/55475495/160751794-19389408-2ea8-4eb5-81f5-05b7b72d5680.gif)
 
-[https://imgflip.com/gif/6anise]
+
 
 ### `npm start`
 
