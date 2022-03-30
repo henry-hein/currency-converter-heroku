@@ -25,7 +25,13 @@ Currency converter is an opportunity to learn about creating Mobile Responsive W
 
 ### Currency Conversion and Swap
 
-![6anzsa](https://user-images.githubusercontent.com/55475495/160776757-c95666bc-21c6-40fe-8c0e-90a47622f5a1.gif)
+![6anzsa](https://user-images.githubusercontent.com/55475495/160778291-91d8e150-ed5a-4204-a92e-bf7e5c904e9f.gif)
+
+### Historical Conversion Chart
+
+![6ao11i](https://user-images.githubusercontent.com/55475495/160778709-add323d4-168d-44c4-89f2-d589cd5895e5.gif)
+
+
 
 
 ### `npm start`
