@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Currency Converter App feat. React, Boostrap, and Continous Deployment on Heroku
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Author**: Henry [heinhenry@protonmail.com]
 
 ## Available Scripts
 
