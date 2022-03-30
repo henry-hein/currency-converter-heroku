@@ -1,5 +1,7 @@
 # Currency Converter App feat. React, Boostrap, and Continous Deployment on Heroku
 
+**Live Site**: https://currency-converter-heroku.herokuapp.com/
+
 **Author**: **Henry** [heinhenry@protonmail.com]
 
 A currency converter app that allows you to convert from one popular currency to another, see historical exchange rates, and see exchange rates between
@@ -34,5 +36,3 @@ Currency converter is an opportunity to learn about creating Mobile Responsive W
 ### Exchange Rate Table
 
 ![6ao9ok](6ao9ok.gif)
-
-https://currency-converter-heroku.herokuapp.com/
