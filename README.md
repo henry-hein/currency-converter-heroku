@@ -25,11 +25,11 @@ Currency converter is an opportunity to learn about creating Mobile Responsive W
 
 ### Currency Conversion and Swap
 
-![6ao1wy](https://user-images.githubusercontent.com/55475495/160782863-a255e02e-918c-422a-b979-d95aae248d9e.gif)
+![6ao1wy](6ao1wy.gif)
 
 ### Historical Conversion Chart
 
-![6ao11i](https://user-images.githubusercontent.com/55475495/160782961-ad9991ed-f926-4468-a039-37db09df6262.gif)
+![6ao11i](6ao11i.gif)
 
 
 
