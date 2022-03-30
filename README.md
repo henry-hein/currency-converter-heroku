@@ -25,7 +25,7 @@ Currency converter is an opportunity to learn about creating Mobile Responsive W
 
 ### Currency Conversion and Swap
 
-![6ao1wy](![6ao1wy](https://user-images.githubusercontent.com/55475495/160782863-a255e02e-918c-422a-b979-d95aae248d9e.gif)
+![6ao1wy](https://user-images.githubusercontent.com/55475495/160782863-a255e02e-918c-422a-b979-d95aae248d9e.gif)
 
 ### Historical Conversion Chart
 
