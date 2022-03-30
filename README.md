@@ -5,6 +5,8 @@
 A currency converter app that allows you to convert from one popular currency to another, see historical exchange rates, and see exchange rates between
 base currency of your choice and 30+ currencies.
 
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://imgflip.com/gif/6anise)
+
 [https://imgflip.com/gif/6anise]
 
 ### `npm start`
