@@ -11,7 +11,7 @@ base currency of your choice and 30+ currencies.
 
 ## Motivation
 
-Currency converter is an opportunity to learn about creating Mobile Responsive Website using React, React Hooks, as well as work with public APIs, learn version management with Github and continuous deployment using Heroku platform.
+Currency converter is an opportunity to learn about creating Mobile Responsive Website using React, React Hooks, as well as work with public APIs, learn version management with Git and continuous deployment using Heroku platform.
 
 ## Technology
 
